@@ -1,0 +1,526 @@
+{
+    "paymentOptions": [
+        {
+            "paymentOptionId": 8,
+            "displayOrder": 2,
+            "name": "debitCard",
+            "localizedName": "Debit Card",
+            "defaultOption": true,
+            "useForFx": false,
+            "paymentOptionDisabled": false,
+            "receiveGroups": [
+                {
+                    "receiveGroupName": "DIRECT_TO_ACCT",
+                    "receiveGroupLabel": "Mobile Wallet",
+                    "order": 1,
+                    "receiveOptions": [
+                        {
+                            "order": 4,
+                            "deliveryOptionId": 19,
+                            "description": "Select Wallets",
+                            "localizedDescription": "Select Wallets",
+                            "receiveCurrency": "GHS",
+                            "exchangeRate": 15.3750,
+                            "exchangeRateEstimated": false,
+                            "receiveAgentId": "71615181",
+                            "sendFees": 0.00,
+                            "totalNonDiscountedFees": 0.00,
+                            "sendTaxes": 0.00,
+                            "sendAmount": 100.00,
+                            "totalAmountToCollect": 100.00,
+                            "receiveFees": 0.00,
+                            "receiveFeesEstimated": false,
+                            "receiveTaxes": 0.00,
+                            "receiveTaxesEstimated": false,
+                            "receiveAmount": 1537.50,
+                            "totalAmountToReceive": 1537.50,
+                            "mgiTransactionSessionId": "1839311N1739310875759056254603NN",
+                            "estimatedDeliveryDateLabel": "Money available by 0-1 Business Days",
+                            "estimatedDeliveryDate": "0-1 Business Days",
+                            "receiveCountry": "GHA",
+                            "sendFeeTaxAmount": 0.00,
+                            "fxUnRevisedPricingDetails": {
+                                "unRevisedFxRate": 15.1905,
+                                "unRevisedReceiveAmount": 1519.05,
+                                "unRevisedSendAmount": 100.00,
+                                "unRevisedTotalSendFee": 0.00
+                            }
+                        }
+                    ],
+                    "hideForNewTransaction": false,
+                    "overloadWithFastSend": false
+                },
+                {
+                    "receiveGroupName": "ACCOUNT_DEPOSIT",
+                    "receiveGroupLabel": "Direct to Bank Account",
+                    "order": 2,
+                    "receiveOptions": [
+                        {
+                            "order": 3,
+                            "deliveryOptionId": 10,
+                            "description": "All Banks",
+                            "localizedDescription": "All Banks",
+                            "receiveCurrency": "GHS",
+                            "exchangeRate": 15.3981,
+                            "exchangeRateEstimated": false,
+                            "receiveAgentId": "71506410",
+                            "sendFees": 0.00,
+                            "totalNonDiscountedFees": 0.00,
+                            "sendTaxes": 0.00,
+                            "sendAmount": 100.00,
+                            "totalAmountToCollect": 100.00,
+                            "receiveFees": 0.00,
+                            "receiveFeesEstimated": false,
+                            "receiveTaxes": 0.00,
+                            "receiveTaxesEstimated": false,
+                            "receiveAmount": 1539.81,
+                            "totalAmountToReceive": 1539.81,
+                            "mgiTransactionSessionId": "1839311N1739310875759465807783NN",
+                            "estimatedDeliveryDateLabel": "Money available by 0-3 Business Days",
+                            "estimatedDeliveryDate": "0-3 Business Days",
+                            "receiveCountry": "GHA",
+                            "sendFeeTaxAmount": 0.00,
+                            "fxUnRevisedPricingDetails": {
+                                "unRevisedFxRate": 15.1444,
+                                "unRevisedReceiveAmount": 1514.44,
+                                "unRevisedSendAmount": 100.00,
+                                "unRevisedTotalSendFee": 1.99
+                            }
+                        }
+                    ],
+                    "hideForNewTransaction": false,
+                    "overloadWithFastSend": false
+                },
+                {
+                    "receiveGroupName": "CASH_PICKUP",
+                    "receiveGroupLabel": "Cash Pickup",
+                    "order": 6,
+                    "receiveOptions": [
+                        {
+                            "order": 1,
+                            "deliveryOptionId": 0,
+                            "description": "10 Minute Service",
+                            "localizedDescription": "10 Minute Service",
+                            "receiveCurrency": "GHS",
+                            "exchangeRate": 15.3904,
+                            "exchangeRateEstimated": false,
+                            "sendFees": 0.00,
+                            "totalNonDiscountedFees": 0.00,
+                            "sendTaxes": 0.00,
+                            "sendAmount": 100.00,
+                            "totalAmountToCollect": 100.00,
+                            "receiveFees": 0.00,
+                            "receiveFeesEstimated": false,
+                            "receiveTaxes": 0.00,
+                            "receiveTaxesEstimated": false,
+                            "receiveAmount": 1539.04,
+                            "totalAmountToReceive": 1539.04,
+                            "mgiTransactionSessionId": "1839311N1739310875756218453927NN",
+                            "estimatedDeliveryDateLabel": "Money available by A Few Minutes",
+                            "estimatedDeliveryDate": "A Few Minutes",
+                            "receiveCountry": "GHA",
+                            "sendFeeTaxAmount": 0.00,
+                            "fxUnRevisedPricingDetails": {
+                                "unRevisedFxRate": 15.1059,
+                                "unRevisedReceiveAmount": 1510.59,
+                                "unRevisedSendAmount": 100.00,
+                                "unRevisedTotalSendFee": 5.49
+                            }
+                        }
+                    ],
+                    "hideForNewTransaction": false,
+                    "overloadWithFastSend": false
+                },
+                {
+                    "receiveGroupName": "CASH_PICKUP_DO4",
+                    "receiveGroupLabel": "Cash Pickup at Agricultural Development Bank",
+                    "order": 7,
+                    "receiveOptions": [
+                        {
+                            "order": 2,
+                            "deliveryOptionId": 4,
+                            "description": "10 Minute Service to Agricultural Development Bank",
+                            "localizedDescription": "10 Minute Service to Agricultural Development Bank",
+                            "receiveCurrency": "GHS",
+                            "exchangeRate": 15.3750,
+                            "exchangeRateEstimated": false,
+                            "receiveAgentId": "65203305",
+                            "sendFees": 0.00,
+                            "totalNonDiscountedFees": 0.00,
+                            "sendTaxes": 0.00,
+                            "sendAmount": 100.00,
+                            "totalAmountToCollect": 100.00,
+                            "receiveFees": 0.00,
+                            "receiveFeesEstimated": false,
+                            "receiveTaxes": 0.00,
+                            "receiveTaxesEstimated": false,
+                            "receiveAmount": 1537.50,
+                            "totalAmountToReceive": 1537.50,
+                            "mgiTransactionSessionId": "1839311N1739310875759274447833NN",
+                            "estimatedDeliveryDateLabel": "Money available by A Few Minutes",
+                            "estimatedDeliveryDate": "A Few Minutes",
+                            "receiveCountry": "GHA",
+                            "sendFeeTaxAmount": 0.00,
+                            "fxUnRevisedPricingDetails": {
+                                "unRevisedFxRate": 15.1213,
+                                "unRevisedReceiveAmount": 1512.13,
+                                "unRevisedSendAmount": 100.00,
+                                "unRevisedTotalSendFee": 5.49
+                            }
+                        }
+                    ],
+                    "hideForNewTransaction": false,
+                    "overloadWithFastSend": false
+                }
+            ]
+        },
+        {
+            "paymentOptionId": 9,
+            "displayOrder": 5,
+            "name": "creditCardExplicit",
+            "localizedName": "Credit Card",
+            "defaultOption": false,
+            "useForFx": true,
+            "paymentOptionDisabled": false,
+            "receiveGroups": [
+                {
+                    "receiveGroupName": "DIRECT_TO_ACCT",
+                    "receiveGroupLabel": "Mobile Wallet",
+                    "order": 1,
+                    "receiveOptions": [
+                        {
+                            "order": 4,
+                            "deliveryOptionId": 19,
+                            "description": "Select Wallets",
+                            "localizedDescription": "Select Wallets",
+                            "receiveCurrency": "GHS",
+                            "exchangeRate": 15.3750,
+                            "exchangeRateEstimated": false,
+                            "receiveAgentId": "71615181",
+                            "sendFees": 3.00,
+                            "totalNonDiscountedFees": 3.00,
+                            "sendTaxes": 0.00,
+                            "sendAmount": 100.00,
+                            "totalAmountToCollect": 103.00,
+                            "receiveFees": 0.00,
+                            "receiveFeesEstimated": false,
+                            "receiveTaxes": 0.00,
+                            "receiveTaxesEstimated": false,
+                            "receiveAmount": 1537.50,
+                            "totalAmountToReceive": 1537.50,
+                            "mgiTransactionSessionId": "3532861N1739310876214928633152NN",
+                            "estimatedDeliveryDateLabel": "Money available by 0-1 Business Days",
+                            "estimatedDeliveryDate": "0-1 Business Days",
+                            "receiveCountry": "GHA",
+                            "sendFeeTaxAmount": 0.00,
+                            "fxUnRevisedPricingDetails": {
+                                "unRevisedFxRate": 15.1905,
+                                "unRevisedReceiveAmount": 1519.05,
+                                "unRevisedSendAmount": 100.00,
+                                "unRevisedTotalSendFee": 3.00
+                            }
+                        }
+                    ],
+                    "hideForNewTransaction": false,
+                    "overloadWithFastSend": false
+                },
+                {
+                    "receiveGroupName": "ACCOUNT_DEPOSIT",
+                    "receiveGroupLabel": "Direct to Bank Account",
+                    "order": 2,
+                    "receiveOptions": [
+                        {
+                            "order": 3,
+                            "deliveryOptionId": 10,
+                            "description": "All Banks",
+                            "localizedDescription": "All Banks",
+                            "receiveCurrency": "GHS",
+                            "exchangeRate": 15.3981,
+                            "exchangeRateEstimated": false,
+                            "receiveAgentId": "71506410",
+                            "sendFees": 6.49,
+                            "totalNonDiscountedFees": 6.49,
+                            "sendTaxes": 0.00,
+                            "sendAmount": 100.00,
+                            "totalAmountToCollect": 106.49,
+                            "receiveFees": 0.00,
+                            "receiveFeesEstimated": false,
+                            "receiveTaxes": 0.00,
+                            "receiveTaxesEstimated": false,
+                            "receiveAmount": 1539.81,
+                            "totalAmountToReceive": 1539.81,
+                            "mgiTransactionSessionId": "3532861N1739310876214389342052NN",
+                            "estimatedDeliveryDateLabel": "Money available by 0-3 Business Days",
+                            "estimatedDeliveryDate": "0-3 Business Days",
+                            "receiveCountry": "GHA",
+                            "sendFeeTaxAmount": 0.00,
+                            "fxUnRevisedPricingDetails": {
+                                "unRevisedFxRate": 15.1444,
+                                "unRevisedReceiveAmount": 1514.44,
+                                "unRevisedSendAmount": 100.00,
+                                "unRevisedTotalSendFee": 6.49
+                            }
+                        }
+                    ],
+                    "hideForNewTransaction": false,
+                    "overloadWithFastSend": false
+                },
+                {
+                    "receiveGroupName": "CASH_PICKUP",
+                    "receiveGroupLabel": "Cash Pickup",
+                    "order": 6,
+                    "receiveOptions": [
+                        {
+                            "order": 1,
+                            "deliveryOptionId": 0,
+                            "description": "10 Minute Service",
+                            "localizedDescription": "10 Minute Service",
+                            "receiveCurrency": "GHS",
+                            "exchangeRate": 15.3904,
+                            "exchangeRateEstimated": false,
+                            "sendFees": 8.49,
+                            "totalNonDiscountedFees": 8.49,
+                            "sendTaxes": 0.00,
+                            "sendAmount": 100.00,
+                            "totalAmountToCollect": 108.49,
+                            "receiveFees": 0.00,
+                            "receiveFeesEstimated": false,
+                            "receiveTaxes": 0.00,
+                            "receiveTaxesEstimated": false,
+                            "receiveAmount": 1539.04,
+                            "totalAmountToReceive": 1539.04,
+                            "mgiTransactionSessionId": "3532861N1739310876212630613688NN",
+                            "estimatedDeliveryDateLabel": "Money available by A Few Minutes",
+                            "estimatedDeliveryDate": "A Few Minutes",
+                            "receiveCountry": "GHA",
+                            "sendFeeTaxAmount": 0.00,
+                            "fxUnRevisedPricingDetails": {
+                                "unRevisedFxRate": 15.1059,
+                                "unRevisedReceiveAmount": 1510.59,
+                                "unRevisedSendAmount": 100.00,
+                                "unRevisedTotalSendFee": 8.49
+                            }
+                        }
+                    ],
+                    "hideForNewTransaction": false,
+                    "overloadWithFastSend": false
+                },
+                {
+                    "receiveGroupName": "CASH_PICKUP_DO4",
+                    "receiveGroupLabel": "Cash Pickup at Agricultural Development Bank",
+                    "order": 7,
+                    "receiveOptions": [
+                        {
+                            "order": 2,
+                            "deliveryOptionId": 4,
+                            "description": "10 Minute Service to Agricultural Development Bank",
+                            "localizedDescription": "10 Minute Service to Agricultural Development Bank",
+                            "receiveCurrency": "GHS",
+                            "exchangeRate": 15.3750,
+                            "exchangeRateEstimated": false,
+                            "receiveAgentId": "65203305",
+                            "sendFees": 8.49,
+                            "totalNonDiscountedFees": 8.49,
+                            "sendTaxes": 0.00,
+                            "sendAmount": 100.00,
+                            "totalAmountToCollect": 108.49,
+                            "receiveFees": 0.00,
+                            "receiveFeesEstimated": false,
+                            "receiveTaxes": 0.00,
+                            "receiveTaxesEstimated": false,
+                            "receiveAmount": 1537.50,
+                            "totalAmountToReceive": 1537.50,
+                            "mgiTransactionSessionId": "3532861N1739310876214463009472NN",
+                            "estimatedDeliveryDateLabel": "Money available by A Few Minutes",
+                            "estimatedDeliveryDate": "A Few Minutes",
+                            "receiveCountry": "GHA",
+                            "sendFeeTaxAmount": 0.00,
+                            "fxUnRevisedPricingDetails": {
+                                "unRevisedFxRate": 15.1213,
+                                "unRevisedReceiveAmount": 1512.13,
+                                "unRevisedSendAmount": 100.00,
+                                "unRevisedTotalSendFee": 8.49
+                            }
+                        }
+                    ],
+                    "hideForNewTransaction": false,
+                    "overloadWithFastSend": false
+                }
+            ]
+        },
+        {
+            "paymentOptionId": 3,
+            "displayOrder": 6,
+            "name": "cash",
+            "localizedName": "Cash at Location",
+            "defaultOption": false,
+            "useForFx": false,
+            "paymentOptionDisabled": false,
+            "receiveGroups": [
+                {
+                    "receiveGroupName": "DIRECT_TO_ACCT",
+                    "receiveGroupLabel": "Mobile Wallet",
+                    "order": 1,
+                    "receiveOptions": [
+                        {
+                            "order": 4,
+                            "deliveryOptionId": 19,
+                            "description": "Select Wallets",
+                            "localizedDescription": "Select Wallets",
+                            "receiveCurrency": "GHS",
+                            "exchangeRate": 15.3750,
+                            "exchangeRateEstimated": false,
+                            "receiveAgentId": "71615181",
+                            "sendFees": 0.00,
+                            "totalNonDiscountedFees": 0.00,
+                            "sendTaxes": 0.00,
+                            "sendAmount": 100.00,
+                            "totalAmountToCollect": 100.00,
+                            "receiveFees": 0.00,
+                            "receiveFeesEstimated": false,
+                            "receiveTaxes": 0.00,
+                            "receiveTaxesEstimated": false,
+                            "receiveAmount": 1537.50,
+                            "totalAmountToReceive": 1537.50,
+                            "mgiTransactionSessionId": "1839311N1739310875759056254603NN",
+                            "estimatedDeliveryDateLabel": "Money available by 0-1 Business Days",
+                            "estimatedDeliveryDate": "0-1 Business Days",
+                            "receiveCountry": "GHA",
+                            "sendFeeTaxAmount": 0.00,
+                            "fxUnRevisedPricingDetails": {
+                                "unRevisedFxRate": 15.1905,
+                                "unRevisedReceiveAmount": 1519.05,
+                                "unRevisedSendAmount": 100.00,
+                                "unRevisedTotalSendFee": 0.00
+                            }
+                        }
+                    ],
+                    "hideForNewTransaction": false,
+                    "overloadWithFastSend": false
+                },
+                {
+                    "receiveGroupName": "ACCOUNT_DEPOSIT",
+                    "receiveGroupLabel": "Direct to Bank Account",
+                    "order": 2,
+                    "receiveOptions": [
+                        {
+                            "order": 3,
+                            "deliveryOptionId": 10,
+                            "description": "All Banks",
+                            "localizedDescription": "All Banks",
+                            "receiveCurrency": "GHS",
+                            "exchangeRate": 15.3981,
+                            "exchangeRateEstimated": false,
+                            "receiveAgentId": "71506410",
+                            "sendFees": 0.00,
+                            "totalNonDiscountedFees": 0.00,
+                            "sendTaxes": 0.00,
+                            "sendAmount": 100.00,
+                            "totalAmountToCollect": 100.00,
+                            "receiveFees": 0.00,
+                            "receiveFeesEstimated": false,
+                            "receiveTaxes": 0.00,
+                            "receiveTaxesEstimated": false,
+                            "receiveAmount": 1539.81,
+                            "totalAmountToReceive": 1539.81,
+                            "mgiTransactionSessionId": "1839311N1739310875759465807783NN",
+                            "estimatedDeliveryDateLabel": "Money available by 0-3 Business Days",
+                            "estimatedDeliveryDate": "0-3 Business Days",
+                            "receiveCountry": "GHA",
+                            "sendFeeTaxAmount": 0.00,
+                            "fxUnRevisedPricingDetails": {
+                                "unRevisedFxRate": 15.1444,
+                                "unRevisedReceiveAmount": 1514.44,
+                                "unRevisedSendAmount": 100.00,
+                                "unRevisedTotalSendFee": 1.99
+                            }
+                        }
+                    ],
+                    "hideForNewTransaction": false,
+                    "overloadWithFastSend": false
+                },
+                {
+                    "receiveGroupName": "CASH_PICKUP",
+                    "receiveGroupLabel": "Cash Pickup",
+                    "order": 6,
+                    "receiveOptions": [
+                        {
+                            "order": 1,
+                            "deliveryOptionId": 0,
+                            "description": "10 Minute Service",
+                            "localizedDescription": "10 Minute Service",
+                            "receiveCurrency": "GHS",
+                            "exchangeRate": 15.3904,
+                            "exchangeRateEstimated": false,
+                            "sendFees": 0.00,
+                            "totalNonDiscountedFees": 0.00,
+                            "sendTaxes": 0.00,
+                            "sendAmount": 100.00,
+                            "totalAmountToCollect": 100.00,
+                            "receiveFees": 0.00,
+                            "receiveFeesEstimated": false,
+                            "receiveTaxes": 0.00,
+                            "receiveTaxesEstimated": false,
+                            "receiveAmount": 1539.04,
+                            "totalAmountToReceive": 1539.04,
+                            "mgiTransactionSessionId": "1839311N1739310875756218453927NN",
+                            "estimatedDeliveryDateLabel": "Money available by A Few Minutes",
+                            "estimatedDeliveryDate": "A Few Minutes",
+                            "receiveCountry": "GHA",
+                            "sendFeeTaxAmount": 0.00,
+                            "fxUnRevisedPricingDetails": {
+                                "unRevisedFxRate": 15.1059,
+                                "unRevisedReceiveAmount": 1510.59,
+                                "unRevisedSendAmount": 100.00,
+                                "unRevisedTotalSendFee": 5.49
+                            }
+                        }
+                    ],
+                    "hideForNewTransaction": false,
+                    "overloadWithFastSend": false
+                },
+                {
+                    "receiveGroupName": "CASH_PICKUP_DO4",
+                    "receiveGroupLabel": "Cash Pickup at Agricultural Development Bank",
+                    "order": 7,
+                    "receiveOptions": [
+                        {
+                            "order": 2,
+                            "deliveryOptionId": 4,
+                            "description": "10 Minute Service to Agricultural Development Bank",
+                            "localizedDescription": "10 Minute Service to Agricultural Development Bank",
+                            "receiveCurrency": "GHS",
+                            "exchangeRate": 15.3750,
+                            "exchangeRateEstimated": false,
+                            "receiveAgentId": "65203305",
+                            "sendFees": 0.00,
+                            "totalNonDiscountedFees": 0.00,
+                            "sendTaxes": 0.00,
+                            "sendAmount": 100.00,
+                            "totalAmountToCollect": 100.00,
+                            "receiveFees": 0.00,
+                            "receiveFeesEstimated": false,
+                            "receiveTaxes": 0.00,
+                            "receiveTaxesEstimated": false,
+                            "receiveAmount": 1537.50,
+                            "totalAmountToReceive": 1537.50,
+                            "mgiTransactionSessionId": "1839311N1739310875759274447833NN",
+                            "estimatedDeliveryDateLabel": "Money available by A Few Minutes",
+                            "estimatedDeliveryDate": "A Few Minutes",
+                            "receiveCountry": "GHA",
+                            "sendFeeTaxAmount": 0.00,
+                            "fxUnRevisedPricingDetails": {
+                                "unRevisedFxRate": 15.1213,
+                                "unRevisedReceiveAmount": 1512.13,
+                                "unRevisedSendAmount": 100.00,
+                                "unRevisedTotalSendFee": 5.49
+                            }
+                        }
+                    ],
+                    "hideForNewTransaction": false,
+                    "overloadWithFastSend": false
+                }
+            ]
+        }
+    ]
+}
