@@ -6,7 +6,7 @@ import { makeConnectSettings } from "./schema/settings-schema";
 const extension = new NetlifyExtension();
 //Declare the connector
 const connector = extension.addConnector({
-  typePrefix: "Stores",
+  typePrefix: "Moneygram",
   supports: {
     connect: true,
     visualEditor: false,
@@ -35,7 +35,7 @@ const connector = extension.addConnector({
 class ProductApiClient {
   API: string;
   constructor() {
-    this.API = `https://fakestoreapi.com/products`;
+    this.API = `https://zingy-muffin-1f6fe5.netlify.app/.netlify/functions/getData`;
   }
   async getStores() {
     let apiUrl = this.API;
@@ -51,6 +51,7 @@ connector.model(async ({ define }) => {
   define.document({
     name: `PaymentOption`,
     fields: {
+      contentId: { type: `string` },
       paymentOptionId: { type: `number` },
       displayOrder: { type: `number` },
       name: { type: `string` },
@@ -59,17 +60,15 @@ connector.model(async ({ define }) => {
       useForFx: { type: `boolean` },
       paymentOptionDisabled: { type: `boolean` },
       receiveGroups: {
-        type: `list`,
-        of: {
-          type: `object`,
+        list: true,
+        type: define.inlineObject({
           fields: {
             receiveGroupName: { type: `string` },
             receiveGroupLabel: { type: `string` },
             order: { type: `number` },
             receiveOptions: {
-              type: `list`,
-              of: {
-                type: `object`,
+              list: true,
+              type: define.inlineObject({
                 fields: {
                   order: { type: `number` },
                   deliveryOptionId: { type: `number` },
@@ -96,46 +95,87 @@ connector.model(async ({ define }) => {
                   receiveCountry: { type: `string` },
                   sendFeeTaxAmount: { type: `float` },
                   fxUnRevisedPricingDetails: {
-                    type: `object`,
-                    fields: {
-                      unRevisedFxRate: { type: `float` },
-                      unRevisedReceiveAmount: { type: `float` },
-                      unRevisedSendAmount: { type: `float` },
-                      unRevisedTotalSendFee: { type: `float` },
-                    },
+                    type: define.inlineObject({
+                      fields: {
+                        unRevisedFxRate: { type: `float` },
+                        unRevisedReceiveAmount: { type: `float` },
+                        unRevisedSendAmount: { type: `float` },
+                        unRevisedTotalSendFee: { type: `float` },
+                      },
+                    }),
                   },
                 },
-              },
+              }),
             },
             hideForNewTransaction: { type: `boolean` },
             overloadWithFastSend: { type: `boolean` },
           },
-        },
+        }),
       },
     },
   });
 });
 
 
-let productIds: string[] = [];
-
 //Sync your connector with API
 connector.sync(async ({ models, state }) => {
-  const currentProductIds: string[] = []
   const data = await state.client.getStores({});
-  data.forEach((product: { id: any; }) => {
-    currentProductIds.push(product.id)
-    models.Product.insert({
-      ...product,
+  console.log(`The payment option id is ${data.paymentOptions[0].paymentOptionId}`);
+
+  data.paymentOptions.forEach((paymentOption: any) => {
+    models.PaymentOption.insert({
+      id: paymentOption.paymentOptionId,
+      paymentOptionId: paymentOption.paymentOptionId,
+      displayOrder: paymentOption.displayOrder,
+      name: paymentOption.name,
+      localizedName: paymentOption.localizedName,
+      defaultOption: paymentOption.defaultOption,
+      useForFx: paymentOption.useForFx,
+      paymentOptionDisabled: paymentOption.paymentOptionDisabled,
+      receiveGroups: paymentOption.receiveGroups.map((group: any) => ({
+        receiveGroupName: group.receiveGroupName,
+        receiveGroupLabel: group.receiveGroupLabel,
+        order: group.order,
+        receiveOptions: group.receiveOptions.map((option: any) => ({
+          order: option.order,
+          deliveryOptionId: option.deliveryOptionId,
+          description: option.description,
+          localizedDescription: option.localizedDescription,
+          receiveCurrency: option.receiveCurrency,
+          exchangeRate: option.exchangeRate,
+          exchangeRateEstimated: option.exchangeRateEstimated,
+          receiveAgentId: option.receiveAgentId,
+          sendFees: option.sendFees,
+          totalNonDiscountedFees: option.totalNonDiscountedFees,
+          sendTaxes: option.sendTaxes,
+          sendAmount: option.sendAmount,
+          totalAmountToCollect: option.totalAmountToCollect,
+          receiveFees: option.receiveFees,
+          receiveFeesEstimated: option.receiveFeesEstimated,
+          receiveTaxes: option.receiveTaxes,
+          receiveTaxesEstimated: option.receiveTaxesEstimated,
+          receiveAmount: option.receiveAmount,
+          totalAmountToReceive: option.totalAmountToReceive,
+          mgiTransactionSessionId: option.mgiTransactionSessionId,
+          estimatedDeliveryDateLabel: option.estimatedDeliveryDateLabel,
+          estimatedDeliveryDate: option.estimatedDeliveryDate,
+          receiveCountry: option.receiveCountry,
+          sendFeeTaxAmount: option.sendFeeTaxAmount,
+          fxUnRevisedPricingDetails: option.fxUnRevisedPricingDetails ? {
+            unRevisedFxRate: option.fxUnRevisedPricingDetails.unRevisedFxRate,
+            unRevisedReceiveAmount: option.fxUnRevisedPricingDetails.unRevisedReceiveAmount,
+            unRevisedSendAmount: option.fxUnRevisedPricingDetails.unRevisedSendAmount,
+            unRevisedTotalSendFee: option.fxUnRevisedPricingDetails.unRevisedTotalSendFee,
+          } : undefined,
+        })),
+        hideForNewTransaction: group.hideForNewTransaction,
+        overloadWithFastSend: group.overloadWithFastSend,
+      })),
       _createdAt: new Date().toISOString(),
       _status: `published`,
-      contentId: product.id,
+      contentId: paymentOption.paymentOptionId,
     });
   });
-
-  productIds.forEach(id => { if (!currentProductIds.includes(id)) { models.Product.delete(id) } })
-
-  productIds = currentProductIds;
 });
 
 export { extension };
