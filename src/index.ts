@@ -35,7 +35,7 @@ const connector = extension.addConnector({
 class ProductApiClient {
   API: string;
   constructor() {
-    this.API = `https://zingy-muffin-1f6fe5.netlify.app/.netlify/functions/getData`;
+    this.API = `https://moneygram--proxy-function.netlify.app/.netlify/functions/proxy`;
   }
   async getStores() {
     let apiUrl = this.API;
